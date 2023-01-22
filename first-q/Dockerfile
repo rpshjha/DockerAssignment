@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-WORKDIR /1
+WORKDIR /first-q
 
 COPY ./myNameAndWhatIAmLearning .
 
