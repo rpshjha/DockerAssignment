@@ -1,11 +1,9 @@
 FROM alpine:latest
 
-WORKDIR /first-q
+COPY myNameAndWhatIAmLearning.sh .
 
-COPY ./myNameAndWhatIAmLearning .
+RUN chmod +x myNameAndWhatIAmLearning.sh
 
-RUN chmod +x myNameAndWhatIAmLearning
+CMD ["./myNameAndWhatIAmLearning.sh"]
 
-CMD ["/myNameAndWhatIAmLearning"]
-
-ENTRYPOINT ["/bin/bash", "-c"]
+ENTRYPOINT ["/bin/sh", "-c"]
